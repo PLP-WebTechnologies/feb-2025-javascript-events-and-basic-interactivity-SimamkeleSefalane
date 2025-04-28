@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Interactive Playground Game</h1>
+
+        <!-- Event Handling -->
+        <section class="card">
+            <h2>Event Handling</h2>
+            <button id="clickBtn">Click Me!</button>
+            <div id="hoverBox">Hover over me!</div>
+            <input type="text" id="keyInput" placeholder="Type something..." />
+            <button id="secretBtn">Double-Click Me</button>
+            <p id="secretMessage" class="hidden">You found the secret!</p>
+        </section>
+
+        <!-- Interactive Elements -->
+        <section class="card">
+            <h2>Image Slideshow</h2>
+            <div id="slideshow">
+                <img src="pexels-busenur-demirkan-766536648-31724311.jpg" class="slide active" />
+                <img src="pexels-electra-studio-32883186-30910213.jpg" class="slide" />
+                <img src="pexels-nati-87264186-30739081.jpg" class="slide" />
+
+                <!-- Add video as a slide -->
+                <div class="video-wrapper slide">
+                    <video controls>
+                        <source src="6277642-uhd_2160_3840_25fps.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+                <!-- Slide navigation buttons -->
+                <button id="prevSlide">⬅️</button>
+                <button id="nextSlide">➡️</button>
+            </div>
+
+            <!-- Tabs section (moved outside slideshow) -->
+            <div class="tabs">
+                <button class="tab" data-target="tab1">Playground 🕹️</button>
+                <button class="tab" data-target="tab2">Learn More 📖</button>
+            </div>
+
+            <div class="tab-content active" id="tab1">
+                <h3>🎯 Challenges to Try:</h3>
+                <ul>
+                    <li>Click the button and see the magic happen!</li>
+                    <li>Hover over the box — can you change its color?</li>
+                    <li>Type something cool and watch for secret messages!</li>
+                </ul>
+
+                <h4>🖼️ Bonus Gallery:</h4>
+                <img src="pexels-electra-studio-32883186-30910213.jpg" alt="Bonus Image"
+                    style="width: 100%; border-radius: 8px; margin-top: 10px;">
+            </div>
+
+            <div class="tab-content" id="tab2">
+                <h3>📚 What You'll Learn:</h3>
+                <p>This playground teaches you the basics of interactivity on the web:</p>
+                <ul>
+                    <li><strong>Event Handling:</strong> React to clicks, typing, hovering, and double-clicks!</li>
+                    <li><strong>Interactive UI:</strong> Make buttons, tabs, galleries, and animations.</li>
+                    <li><strong>Form Validation:</strong> Learn to check user inputs smartly!</li>
+                </ul>
+
+                <h4>💡 Pro Tip:</h4>
+                <p>Keep experimenting! Every great developer started by playing around with small projects like this
+                    one. 🚀</p>
+            </div>
+    </div>
+    </section>
+
+    <!-- Form Validation -->
+    <section class="card">
+        <h2>Sign Up Form</h2>
+        <form id="signupForm">
+            <label>Email:
+                <input type="email" id="email" required />
+                <small id="emailFeedback"></small>
+            </label>
+            <label>Password:
+                <input type="password" id="password" required />
+                <small id="passwordFeedback"></small>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
